@@ -1,8 +1,10 @@
-const express = require("express");
-const app = express();
+import express from "express";
+import dotenv from "dotenv";
+import userRoutes from "./routes/users.js";
+import postRoutes from "./routes/posts.js";
 
-const userRoutes = require("./routes/users");
-const postRoutes = require("./routes/posts");
+const app = express();
+dotenv.config();
 
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
