@@ -1,7 +1,7 @@
-import React, { use } from "react";
+import React, { useEffect, useState } from "react";
 
 function Feed() {
-  const [posts, setPosts] = React.useState([]);
+  const [posts, setPosts] = useState([]);
   useEffect(() => {
     const fetchPosts = async () => {
       try {
